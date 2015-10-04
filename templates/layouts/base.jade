@@ -1,0 +1,26 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width-device=device-width")
+        title= title|| 'My Keystone Website'
+        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+        link(href="/styles/site.min.css", rel="stylesheet")
+
+        block css
+        block head
+    body
+        
+        #header My First Keystone
+
+        #body
+            block intro
+                h1 #{messages}
+            +flash-messages(messages)
+            block content
+    #footer Powered by KeynoteJS
+
+    script(src='/js/lib/jquery/jquery-1.10.2.min.js')    
+    block js

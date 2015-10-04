@@ -1,0 +1,12 @@
+extends ../layouts/base
+
+block content
+    h1 Hello World
+    h1 Hey
+    //h1 #{obj._id}
+    //h1 !{JSON.parse(obj)}
+    ul
+    //h1 #{obj[0]._id}
+    //-var values = #{obj}
+    each val in obj 
+        li= val.name
