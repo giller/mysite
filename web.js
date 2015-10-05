@@ -1,11 +1,11 @@
 var keystone = require('keystone');
 keystone.init({
   
-  'name': 'My First Keystone',
+  'name': 'Shane Gilroy Portfolio',
   
   'favicon': 'public/favicon.ico',
   'less': 'public',
-  'static': ['public'],
+  'static': ['public', 'bower_components'],
   
   'views': 'templates/views',
   'view engine': 'jade',

@@ -7,20 +7,22 @@ html
         meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width-device=device-width")
         title= title|| 'My Keystone Website'
         link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-        link(href="/styles/site.min.css", rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+        link(href="/styles/style.css", rel="stylesheet")
 
-        block css
-        block head
+        //-block css
+        //-block head
     body
-        
+        include ./navbar
         #header My First Keystone
 
-        #body
+        #content
             block intro
                 h1 #{messages}
             +flash-messages(messages)
             block content
     #footer Powered by KeynoteJS
 
-    script(src='/js/lib/jquery/jquery-1.10.2.min.js')    
+    script(src='/jquery/dist/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
     block js
