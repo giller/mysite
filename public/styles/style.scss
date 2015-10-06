@@ -1,11 +1,54 @@
+$color1: #fff;
+$border-color1: #e7e7e7;
+$font-color1: #777;
+
+body > .container {
+    min-height: 600px;
+    padding-top: 62px;
+}
+
+#logo {
+    position:fixed;
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size:24px;
+    color: $font-color1;
+    /*display:inline-block;*/
+    margin-top:9px;
+    margin-left:30px;
+}
+
+#footer {
+    border-top: 1px solid $border-color1;
+    padding: 15px 15px;
+    background: url('../imgs/seamless_paper_texture.png');
+    background-repeat: repeat;
+    min-height:80px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+//bootstrap
 .navbar-default {
-    background-color: #fff;
+    background-color: $color1;
+    position:fixed;
+    width:100%;
 }
 
 .nav {
     text-align: center;
+    width:300px;
+    margin:auto;
+    margin-top:7.5px;
+    float:none;
 }
 
 .nav > li {
-    display: inline;
+    display: inline-block;
 }

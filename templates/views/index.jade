@@ -1,11 +1,14 @@
 extends ../layouts/base
 
 block intro
-    h1 test
+    #intro
+        h4.text-center Hello my name is Shane and welcome to my website. 
+        h5.text-center.italic Please note that this website is still under active development!
 
 block content
-    h1 Hello World
-    h1 Hey
-    ul
-    each val in obj 
-        li= val.name
+    #latest-blog-post
+        h3 Latest Blog Post
+        !{obj[0].content}
+
+    #latest-project
+        h3 Latest Project 

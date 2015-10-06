@@ -5,8 +5,9 @@ html
     head
         meta(charset="utf-8")
         meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width-device=device-width")
-        title= title|| 'My Keystone Website'
+        title= title|| 'Shane Gilroy Personal Website'
         link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+        link(href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css')
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
         link(href="/styles/style.css", rel="stylesheet")
 
@@ -14,14 +15,12 @@ html
         //-block head
     body
         include ./navbar
-        #header My First Keystone
 
-        #content
+        .container
             block intro
-                h1 #{messages}
-            +flash-messages(messages)
             block content
-    #footer Powered by KeynoteJS
+
+        #footer Powered by KeynoteJS
 
     script(src='/jquery/dist/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')

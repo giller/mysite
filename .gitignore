@@ -1,6 +1,7 @@
 updates/*
 node_modules/
 .sass-cache/
+bower_components/
 
 *.log
 *.swp
