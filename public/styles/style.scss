@@ -1,6 +1,7 @@
 $color1: #fff;
 $border-color1: #e7e7e7;
 $font-color1: #777;
+$content-spacing: 40px;
 
 body > .container {
     min-height: 600px;
@@ -26,6 +27,14 @@ body > .container {
     min-height:80px;
 }
 
+#latest-blog-post {
+    margin-top: $content-spacing;
+}
+
+#latest-project {
+    margin-top: $content-spacing;
+}
+
 .center-text {
     text-align: center;
 }
@@ -35,6 +44,7 @@ body > .container {
 }
 
 //bootstrap
+//http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstrap-navbar
 .navbar-default {
     background-color: $color1;
     position:fixed;
@@ -43,9 +53,10 @@ body > .container {
 
 .nav {
     text-align: center;
-    width:300px;
+    width:380px;
     margin:auto;
     margin-top:7.5px;
+    margin-bottom:7.5px;
     float:none;
 }
 
