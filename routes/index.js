@@ -27,4 +27,6 @@ exports = module.exports = function(app) {
     app.get('/', routes.views.index);
     app.get('/projects', routes.views.projects);
     app.get('/blog', routes.views.blog);
+    app.get('/blog/:title', routes.views.singleBlog);
+    app.get('/project/:title', routes.views.singleProject);
 };

@@ -1,15 +1,15 @@
 var keystone = require('keystone'),
-    Posts = keystone.list('Post');
+    Projects = keystone.list('Project');
 
 exports = module.exports = function(req, res) {
     var title = req.param('title');
-    Posts.model.find()
+    Projects.model.find()
         .where('title', title)
         .sort('-createdAt')
         .limit(1)
         .exec(function(err, posts) {
             var view = new keystone.View(req, res);
-            view.render('singleBlog', { 
+            view.render('singleProject', { 
                 model: posts
             });
         });

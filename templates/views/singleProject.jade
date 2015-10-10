@@ -1,0 +1,8 @@
+extends ../layouts/base
+
+block content
+    if model !== null && model.length > 0
+        h2 Hello
+        h2 #{model.title}
+    else
+        h2 Something went wrong retrieving the project! Please try again later.

@@ -1,7 +1,9 @@
 ##What is this?
-This repository contains the code for my personal website and CMS. This site is build
+This repository contains the code for my personal website and CMS. This site is built
 using the [Keystone](http://keystonejs.com/) CMS which runs on
 [Node](https://nodejs.org/en/). 
+
+The folder structure is the recommended structure for Keystone.
 
 I am currently still working on the site and
 will update this readme with more information and links as development progresses!
@@ -14,3 +16,11 @@ The core technologies used are as follows:
 - **View Engine:** Jade
 - **Build Tool:** Grunt 
 - **Database:** Mongodb
+
+##TODOs (semi-in order)
+- **Add content for about/contact**
+- Add some color
+- Host and add some project/blog content
+- Increase collapse width treshold of the navbar
+- Create a proper logo
+- Add commenting functionality

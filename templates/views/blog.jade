@@ -1,4 +1,10 @@
 extends ../layouts/base
 block content
     #blog-wrapper
-        h1 Hello
+        -var v = new Date()
+        each val in obj
+            -var v = 'blog/' + val.title
+            h2= val.title
+            h4= val.createdAt + ' - ' +  val._id
+            a(href=v) Read more...
+        h1 #{obj.length}

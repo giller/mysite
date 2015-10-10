@@ -1,7 +1,10 @@
 extends ../layouts/base
 
 block content
-    if obj !== null
-        h1 #{obj}
+    if model !== null && model.length > 0
+        -model = model[0]
+        h2 #{model.title}
+        h4 Created at #{model.createdAt}
+        !{model.content}
     else
         h1 Whoops! Something went wrong retrieving this post. Please try again!
