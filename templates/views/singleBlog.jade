@@ -1,0 +1,7 @@
+extends ../layouts/base
+
+block content
+    if obj !== null
+        h1 #{obj}
+    else
+        h1 Whoops! Something went wrong retrieving this post. Please try again!

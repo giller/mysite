@@ -5,6 +5,7 @@ bower_components/
 
 *.log
 *.swp
+*.session
 
 # OS generated files #
 ######################
