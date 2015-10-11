@@ -1,7 +1,15 @@
-$color1: #fff;
+$color1: #1352a2;
+$offblack: #333332;
+$bgcolor: #f1f0ee;
+$white: #fff;
 $border-color1: #e7e7e7;
 $font-color1: #777;
 $content-spacing: 40px;
+
+body {
+    background-color: $bgcolor;
+    color: $offblack;
+}
 
 body > .container {
     min-height: 600px;
@@ -9,21 +17,17 @@ body > .container {
 }
 
 #logo {
-    position:fixed;
     font-family: 'Dancing Script';
     font-weight: 700;
     font-size:24px;
-    color: $font-color1;
-    /*display:inline-block;*/
-    margin-top:9px;
-    margin-left:30px;
+    color: $white;
 }
 
 #footer {
     border-top: 1px solid $border-color1;
+    background-color: $offblack;
+    color: $bgcolor;
     padding: 15px 15px;
-    background: url('../imgs/seamless_paper_texture.png');
-    background-repeat: repeat;
     min-height:80px;
 }
 
@@ -35,6 +39,17 @@ body > .container {
     margin-top: $content-spacing;
 }
 
+#contact{
+    margin-bottom:30px;
+
+    a {
+        margin-left:10px;
+    }
+    a > img {
+        width: 25px;
+    }
+}
+
 .center-text {
     text-align: center;
 }
@@ -43,23 +58,80 @@ body > .container {
     font-style: italic;
 }
 
-//bootstrap
+//bootstrap tweaks
 //http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstrap-navbar
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+
 .navbar-default {
     background-color: $color1;
-    position:fixed;
-    width:100%;
+    /*color: $white !important;*/
 }
 
 .nav {
     text-align: center;
     width:380px;
     margin:auto;
-    margin-top:7.5px;
-    margin-bottom:7.5px;
     float:none;
 }
 
 .nav > li {
     display: inline-block;
 }
+
+.nav > li a {
+    color: $white !important;
+}
+
+.nav > li a:hover {
+    color: $bgcolor;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.navbar-toggle {
+    border-color: $white !important;
+}
+
+.navbar-toggle:hover {
+    //background-color: $white;
+    animation-name: colorswitch;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.icon-bar {
+    background-color: $white !important;
+}
+
+//shadows
+/*@media (min-width: 768px){*/
+    /*.navbar-default {*/
+        /*box-shadow: 1px 1px 1px black;*/
+    /*}*/
+/*}*/
+
+/*@media (max-width: 768px){*/
+    /*.navbar {*/
+        /*box-shadow: 1px 1px black;*/
+    /*}*/
+/*}*/
+
+//animations
+@keyframes colorswitch {
+    from{background-color: $color1;}
+    to {background-color: $offblack;}
+}
+
+//trying to increase collapse range
+/*@media (min-width: 699px) and (max-width: 1000px) {*/
+    /*.collapse {*/
+        /*display: block !important;*/
+     /*}*/
+
+     /*.navbar-toggle {*/
+        /*display:none;*/
+     /*}*/
+ /*}*/

@@ -5,7 +5,7 @@ bower_components/
 
 *.log
 *.swp
-*.session
+*.vim
 
 # OS generated files #
 ######################
