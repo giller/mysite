@@ -48,7 +48,7 @@ module.exports = function(grunt) {
                 livereload: true
             },
             express: {
-                files: ['*.js', 'routes/*/*.js', 'routes/*.js', 'models/*.js', '!**/node_modules/**', '!Gruntfile.js'],
+                files: ['*.js', 'routes/*/*.js', 'routes/*.js', 'models/*.js', 'lib/*.js', '!**/node_modules/**', '!Gruntfile.js'],
                 tasks: ['jshint', 'express:dev:stop', 'express:dev'],
                 options: {
                     spawn: false

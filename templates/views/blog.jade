@@ -1,10 +1,26 @@
 extends ../layouts/base
 block content
-    #blog-wrapper
-        -var v = new Date()
-        each val in obj
-            -var v = 'blog/' + val.title
-            h2= val.title
-            h4= val.createdAt + ' - ' +  val._id
-            a(href=v) Read more...
-        h1 #{obj.length}
+    .row.no-margin-top
+        .col-md-8.col-md-offset-2
+            #blogs-header.col-xs-12
+                h2 Blog
+                h3 #{obj.length} posts
+                h4 This is the location for my blog, although it is currently quite empty, I plan on frequently writing blog posts in the future.
+            #blogs-wrapper
+                each val,index in obj
+                    -var fullUrl = 'blog/' + val.title
+                    -var d = new Date(val.createdAt)
+                    -val.d = d.toDateString()
+                    if index%2 === 0
+                        //-add lightbg to this - fix the bug
+                        .col-md-6
+                            h2= val.title
+                            h4= val.d
+                            p= val.brief
+                            a(href=fullUrl) Read more...
+                    else
+                        .col-md-6
+                            h2= val.title
+                            h4= val.d
+                            p= val.brief
+                            a(href=fullUrl) Read more...

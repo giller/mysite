@@ -1,35 +1,52 @@
 $color1: #1352a2;
 $offblack: #333332;
-$bgcolor: #f1f0ee;
+$darkgrey: #f1f0ee;
+$lightgrey: #f6f6f6;
 $white: #fff;
+$navy: #2c3e50;
 $border-color1: #e7e7e7;
 $font-color1: #777;
 $content-spacing: 40px;
 
 body {
-    background-color: $bgcolor;
+    background-color: $darkgrey;
     color: $offblack;
 }
 
-body > .container {
-    min-height: 600px;
+body > .container-fluid {
     padding-top: 62px;
+    font-weight: 200;
+    min-height: 800px;
+}
+
+p {
+    font-size:16px;
 }
 
 #logo {
     font-family: 'Dancing Script';
     font-weight: 700;
     font-size:24px;
-    color: $white;
+    color: $lightgrey;
 }
 
 #footer {
     border-top: 1px solid $border-color1;
-    background-color: $offblack;
-    color: $bgcolor;
+    background-color: $navy;
+    color: $darkgrey;
     padding: 15px 15px;
-    min-height:80px;
+    min-height:100px;
+
+    p {
+        font-size: 10px;
+        font-style: italic;
+
+        a {
+            color: $darkgrey;
+        }
+    }
 }
+
 
 #latest-blog-post {
     margin-top: $content-spacing;
@@ -39,15 +56,48 @@ body > .container {
     margin-top: $content-spacing;
 }
 
+.heading { 
+    position:relative;
+    padding-bottom: 10px;
+ }
+
+.heading::after {
+    content:"";
+    position:absolute;
+    left:50%;
+    margin-left:-75px;
+    height: 2px;
+    width:150px;
+    bottom: 0px;
+    background-color:$color1;
+}
+
+.lightbg {
+    background-color: $lightgrey;
+ }
+
+ .darkbg {
+    background-color: $darkgrey;
+ }
+
 #contact{
     margin-bottom:30px;
 
     a {
-        margin-left:10px;
+        margin-right:10px;
     }
     a > img {
         width: 25px;
     }
+
+    #links {
+        width:95px;
+        margin:auto;
+    }
+}
+
+#projects-header, #blogs-header{
+    margin-bottom: 40px;
 }
 
 .center-text {
@@ -58,11 +108,20 @@ body > .container {
     font-style: italic;
 }
 
+.no-margin-top {
+    margin-top: 0px !important;
+}
+
 //bootstrap tweaks
 //http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstrap-navbar
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
+}
+
+.row { 
+    /*margin-top:40px;*/
+    padding-bottom:50px;
 }
 
 .navbar-default {
@@ -82,17 +141,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav > li a {
-    color: $white !important;
+    color: $lightgrey !important;
 }
 
 .nav > li a:hover {
-    color: $bgcolor;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    color: $darkgrey !important;
+    /*animation-name: colorswitch;*/
+    /*animation-duration: 2s;*/
+    /*animation-fill-mode: forwards;*/
+    /*border-right: 1px solid white;*/
+    /*border-left: 1px solid white;*/
 }
 
 .navbar-toggle {
-    border-color: $white !important;
+    border-color: $lightgrey !important;
 }
 
 .navbar-toggle:hover {
@@ -103,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icon-bar {
-    background-color: $white !important;
+    background-color: $lightgrey !important;
 }
 
 //shadows
@@ -122,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 //animations
 @keyframes colorswitch {
     from{background-color: $color1;}
-    to {background-color: $offblack;}
+    to {background-color: $navy;}
 }
 
 //trying to increase collapse range

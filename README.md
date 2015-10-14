@@ -26,3 +26,7 @@ The core technologies used are as follows:
 - Split SCSS file into multiple files & refactor to fully utilize SCSS features
 - Pagination
 - favicon
+- anchors
+- return only part of the blog content
+- simple api to get total blog post/project count
+- create configuration file for keystone in order to hide sensitive info

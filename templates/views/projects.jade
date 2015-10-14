@@ -1,4 +1,28 @@
 extends ../layouts/base
 
 block content
-    h1 Projects
+    .row.no-margin-top
+        .col-md-8.col-md-offset-2
+            #projects-header.col-xs-12
+                h2 Projects
+                h4 These are a selection of projects I have chosen to demonstrate. Many of these projects will have the source available for viewing. I will go into detail about what the projects do, how the work and provide some screenshots were appropriate.
+                h4 I am still currently in the process of adding existing projects to this page
+
+            #projects-wrapper
+                each val,index in model 
+                    -var fullUrl = 'project/' + val.title
+                    -var d = new Date(val.createdAt)
+                    -val.d = d.toDateString()
+                    if index%2 === 0
+                        //-add lightbg to this - fix the bug
+                        .col-md-6
+                            h2= val.title
+                            h4= 'Date added: ' + val.d
+                            p= val.brief
+                            a(href=fullUrl) Read more...
+                    else
+                        .col-md-6
+                            h2= val.title
+                            h4= val.d
+                            p= val.brief
+                            a(href=fullUrl) Read more...

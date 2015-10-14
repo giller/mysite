@@ -13,7 +13,8 @@ Project.add({
     createdAt: { type: Date, default: Date.now, required: true },
     githubUrl: { type: String  },
     hostedUrl: { type: String },
-    content: { type: Types.Html, wysiwyg: true, required: true, default: "<p>Content</p>" }
+    brief: {type: String, required: true, default: "A really good project"},
+    content: { type: Types.Html, required: true, default: "<p>Content</p>" }
     //image: { type: Types.LocalFile, 
         //dest: 'data/files', 
         //prefix: '/files/', 

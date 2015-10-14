@@ -3,6 +3,7 @@ var keystone = require('keystone'),
 
 exports = module.exports = function(req, res) {
     Posts.model.find()
+        .where('state', 'published')
         .sort('-createdAt')
         .limit(10)
         .exec(function(err, posts) {
