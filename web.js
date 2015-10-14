@@ -1,22 +1,24 @@
-var keystone = require('keystone');
+var keystone = require('keystone'),
+    config = require('./lib/config');
+
 keystone.init({
   
   'name': 'Shane Gilroy Portfolio',
   
   'favicon': 'public/favicon.ico',
-  'less': 'public',
+  //'less': 'public',
   'static': ['public', 'bower_components'],
   
   'views': 'templates/views',
   'view engine': 'jade',
   
   'auto update': true,
-  'mongo': 'mongodb://localhost/my-first-keystone',
+  'mongo': config.connectionString,
   
   'session': true,
   'auth': true,
   'user model': 'User',
-  'cookie secret': '(your secret here)'
+  'cookie secret': config.secret
   
 });
  
