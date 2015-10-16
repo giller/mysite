@@ -16,9 +16,7 @@ The core technologies used are as follows:
 - **Database:** Mongodb
 
 ##TODOs (semi-in order)
-- **Add content for about/contact**
-- Add some color
-- Host and add some project/blog content
+- Add more project content
 - Increase collapse width treshold of the navbar
 - Create a proper logo
 - Add commenting functionality
@@ -26,7 +24,5 @@ The core technologies used are as follows:
 - Split SCSS file into multiple files & refactor to fully utilize SCSS features
 - Pagination
 - favicon
-- anchors
-- return only part of the blog content
+- Fix div anchors
 - simple api to get total blog post/project count
-- create configuration file for keystone in order to hide sensitive info

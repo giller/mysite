@@ -3,8 +3,10 @@ var keystone = require('keystone'),
 
 exports = module.exports = function(req, res) {
     Project.model.find()
+        .where('state', 'published')
+        .select('title brief githubUrl hostedUrl createdAt')
         .sort('-createdAt')
-        .limit(5)
+        .limit(6)
         .exec(function(err, posts) {
             var view = new keystone.View(req, res);
             view.render('projects', { 

@@ -3,7 +3,7 @@ var keystone = require('keystone'),
 
 keystone.init({
   
-  'name': 'Shane Gilroy Portfolio',
+  'name': 'Shane\'s Portfolio',
   
   'favicon': 'public/favicon.ico',
   //'less': 'public',

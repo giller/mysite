@@ -27,7 +27,7 @@ p {
     font-family: 'Dancing Script';
     font-weight: 700;
     font-size:24px;
-    color: $lightgrey;
+    color: $color1;
 }
 
 #footer {
@@ -125,8 +125,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default {
-    background-color: $color1;
+    background-color: $lightgrey;
     /*color: $white !important;*/
+    border-color: $color1;
 }
 
 .nav {
@@ -141,11 +142,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav > li a {
-    color: $lightgrey !important;
+    color: $color1 !important;
 }
 
 .nav > li a:hover {
-    color: $darkgrey !important;
+    color: $navy !important;
     /*animation-name: colorswitch;*/
     /*animation-duration: 2s;*/
     /*animation-fill-mode: forwards;*/
@@ -154,18 +155,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-toggle {
-    border-color: $lightgrey !important;
+    border-color: $color1 !important;
 }
 
 .navbar-toggle:hover {
     //background-color: $white;
     animation-name: colorswitch;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
 .icon-bar {
-    background-color: $lightgrey !important;
+    background-color: $color1 !important;
 }
 
 //shadows
@@ -183,8 +184,8 @@ h1, h2, h3, h4, h5, h6 {
 
 //animations
 @keyframes colorswitch {
-    from{background-color: $color1;}
-    to {background-color: $navy;}
+    from{ background-color: transparent }//background-color: $color1;}
+    to {background-color: $darkgrey;}
 }
 
 //trying to increase collapse range
