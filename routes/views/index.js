@@ -19,7 +19,8 @@ exports = module.exports = function(req, res) {
             Projects.model.find()
             .select('title brief githubUrl hostedUrl createdAt')
             .where('state', 'published')
-            .sort('-createdAt')
+            .where('title', 'My Personal Website')
+            //.sort('-createdAt')
             .limit(1)
             .exec(function(err, posts){
                 project = posts[0];

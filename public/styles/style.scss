@@ -16,7 +16,7 @@ body {
 body > .container-fluid {
     padding-top: 62px;
     font-weight: 200;
-    min-height: 800px;
+    min-height: 980px;
 }
 
 p {
@@ -31,6 +31,11 @@ p {
 }
 
 #footer {
+    /*position:absolute;*/
+    /*left: 0px;*/
+    /*bottom: 0px;*/
+    /*right: 0px;*/
+
     border-top: 1px solid $border-color1;
     background-color: $navy;
     color: $darkgrey;
@@ -98,6 +103,18 @@ p {
 
 #projects-header, #blogs-header{
     margin-bottom: 40px;
+}
+
+.imageblock {
+    img {
+        display:block;
+        margin:auto;
+        margin-top:20px;
+    }
+
+    h6 {
+        margin-bottom:20px;
+    }
 }
 
 .center-text {
