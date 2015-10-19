@@ -2,7 +2,7 @@ var keystone = require('keystone'),
     Projects = keystone.list('Project');
 
 exports = module.exports = function(req, res) {
-    var title = req.param('title');
+    var title = req.params.title;
     Projects.model.find()
         .where('title', title)
         .sort('-createdAt')

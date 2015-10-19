@@ -15,6 +15,8 @@ keystone.init({
   'auto update': true,
   'mongo': config.connectionString,
   
+  'logger': 'common',
+
   'session': true,
   'auth': true,
   'user model': 'User',

@@ -22,7 +22,8 @@ The core technologies used are as follows:
 - Add commenting functionality
 - Put null/empty checks in routing instead of view
 - Split SCSS file into multiple files & refactor to fully utilize SCSS features
+  and improve maintainability
 - Pagination
 - favicon
-- Fix div anchors
+- Fix in-page anchors being warped by static navbar
 - simple api to get total blog post/project count
