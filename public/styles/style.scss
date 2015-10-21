@@ -6,7 +6,7 @@ $white: #fff;
 $navy: #2c3e50;
 $border-color1: #e7e7e7;
 $font-color1: #777;
-$content-spacing: 40px;
+$content-spacing: 20px;
 
 body {
     background-color: $darkgrey;
@@ -103,6 +103,17 @@ p {
 
 #projects-header, #blogs-header{
     margin-bottom: 40px;
+}
+
+img + h2{
+    margin-bottom:10px;
+}
+
+.imageheader {
+    width:25px;
+    display:block;
+    margin:auto;
+    margin-top:20px;
 }
 
 .imageblock {

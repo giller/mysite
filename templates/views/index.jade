@@ -12,12 +12,14 @@ block content
     .row.lightbg
         .col-md-8.col-md-offset-2
             #about-me
+                img.imageheader(src='/icons/eye.png')
                 h2.center-text.heading About Me
                 p I am a recent graduate from the National College of Ireland who is currently seeking graduate opportunities. I achieved a First Class Honors in my Degree which was a Bachelor of Science (Hons) in Computing.
                 p My current primarly goal is to start a career in software development. The languages I primarily use are C#, Java and Javascript. Most of my personal projects are done in C# ASP.NET or node. Most of my academic projects are done using Java.
     .row
         .col-md-8.col-md-offset-2
             #latest-blog-post
+                img.imageheader(src='/icons/left.png')
                 h2.center-text.heading Latest Blog Post
                 h2 !{blog.title}
                 -blog.d = 'Published: ' + new Date(blog.createdAt).toDateString()
@@ -29,6 +31,7 @@ block content
     .row.lightbg
         .col-md-8.col-md-offset-2
             #latest-project
+                img.imageheader(src='/icons/blogging.png')
                 h2.center-text.heading Latest Project
                 h2 !{project.title}
                 -project.d = 'Published: ' + new Date(project.createdAt).toDateString()
@@ -40,12 +43,19 @@ block content
     .row
         .col-md-8.col-md-offset-2
             #contact
+                img.imageheader(src='/icons/news.png')
                 h2.center-text.heading Contact Me
                 p.center-text If you wish to contact me for any reason, you can reach me via email at shane@shanegilroy.me or alternatively by clicking the email icon below!
                 #links
                     a(href='mailto:shane@shanegilroy.me')
-                        img(src='icons/email.svg')
+                        img(src='icons/email.png')
+                    //-a(href='mailto:shane@shanegilroy.me')
+                        //-img(src='icons/email.svg')
                     a(href='https://github.com/giller')
-                        img(src='icons/github.svg')
+                        img(src='icons/github.png')
                     a(href='https://ie.linkedin.com/pub/shane-gilroy/76/479/60a#')
-                        img(src='icons/linkedin.svg')
+                        img(src='icons/linkedin.png')
+
+block footer
+    :markdown
+        Icons made by [Freepik](http://www.flaticon.com/authors/freepik), [Zurb](http://www.flaticon.com/authors/zurb), [Dave Gandy](http://www.flaticon.com/authors/dave-gandy) and [Elegant Themes](http://www.flaticon.com/authors/elegant-themes) respectively
