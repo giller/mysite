@@ -15,7 +15,7 @@ The core technologies used are as follows:
 - **Build Tool:** Grunt 
 - **Database:** Mongodb
 
-##TODOs (semi-in order)
+##TODOs
 - Add more project content
 - Increase collapse width treshold of the navbar
 - Create a proper logo
@@ -27,3 +27,4 @@ The core technologies used are as follows:
 - favicon
 - Fix in-page anchors being warped by static navbar
 - simple api to get total blog post/project count
+- Tags for projects/blogs
