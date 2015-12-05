@@ -1,7 +1,8 @@
 var keystone = require('keystone'),
     Posts = keystone.list('Post'),
     Projects = keystone.list('Project'),
-    async = require('async');
+    async = require('async'),
+    config = require('../../lib/config');
 
 
 
@@ -41,6 +42,7 @@ exports = module.exports = function(req, res) {
 function renderView(req, res, blog, project){
     var view = new keystone.View(req, res);
     view.render('index', {
+        date: config.latestUpdate,
         blog: blog,
         project: project
     });

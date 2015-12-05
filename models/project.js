@@ -1,5 +1,6 @@
 var keystone = require('keystone'),
-    Types = keystone.Field.Types;
+    Types = keystone.Field.Types,
+    config = require('../lib/config');
 
 var Project = new keystone.List('Project', {
     autokey: { path: 'slug', from: 'title', unique: true },
@@ -22,6 +23,12 @@ Project.add({
             //return file.originalname;// + '.' + file.extension
         //}
     //}
+});
+
+Project.schema.pre('save', function(next){
+    //if content was modified update brief
+    config.latestUpdate = new Date();
+    next();
 });
 
 Project.defaultColumns = 'title, createdAt';

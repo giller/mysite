@@ -27,5 +27,5 @@ keystone.init({
 require('./models');
  
 keystone.set('routes', require('./routes'));
- 
+config.latestUpdate = new Date();
 keystone.start();

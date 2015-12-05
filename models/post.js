@@ -1,5 +1,6 @@
 var keystone = require('keystone'),
-    Types = keystone.Field.Types;
+    Types = keystone.Field.Types,
+    config = require('../lib/config');
 
 var Post = new keystone.List('Post', {
     autokey: { path: 'slug', from: 'title', unique: true },
@@ -42,6 +43,7 @@ Post.schema.pre('save', function(next){
         //remove HTML elements and set new brief
         this._doc.brief = content.replace(/<(?:.|\n)*?>/gm, '');
     }
+    config.latestUpdate = new Date();
     next();
 });
 
